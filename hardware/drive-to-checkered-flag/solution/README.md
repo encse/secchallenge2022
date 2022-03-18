@@ -11,9 +11,9 @@ If you look at the HID data (bottom) it resembles to the data of an XBOX control
 We can show all the HID data in a column in Wireshark to make it more easy for the eye:
 ![](wireshark2.png)
 
-Let's export this to a csv `File / Export Packet Dissections / As CSV...`.
+Let's export this with `File / Export Packet Dissections / As CSV...`.
 
-When put next to the video one can recognize that when the driver pushes buttons on the wheel the HID data changes. (I couldn't find this but after the contest I asked for help from the organizers.) 
+Looking at the data and the video side by side, one can recognize that when the driver pushes buttons on the wheel the HID data changes. (I couldn't find this but after the contest I asked for help from the organizers.) 
 
 It turns out that we need to check the low 4 bits of the second byte:
 
@@ -35,40 +35,48 @@ It turns out that we need to check the low 4 bits of the second byte:
 At 15.033221 it changes from f to 4 then quickly reset to f. Let's list all possible values:
 
 ```
-> cat input.csv | awk -F '"' '{print substr($4, 6, 1)}' | uniq > signal
+> cat input.csv | awk -F '"' '{print substr($4, 6, 1)}' | uniq > 
+> cat signal | head
+f
+4
+f
+0
+f
+0
+f
+4
+f
+4
+...
+```
+It seems that it's a sequence of f, 4 and 0. Let's check this:
+```
 > cat signal | sort | uniq
 0
 4
 f
 ```
-
-I take the low 4 bits sort and uniq them. There are only 3 different values. `f` seems to be the separator between signals. Let's convert 4 -> 0 and 0 -> 1:
+Indeed, there are only 3 different values. `f` seems to be the separator between data bits. Let's convert `4 -> 0` and `0 -> 1`:
 
 ```
-> cat signal | sed 's/f/ /' | sed 's/0/1/' | sed 's/4/0/' | tr -d '\n' > bits
+> cat signal | sed -e s/0/1/ -e s/4/0/ -e s/f// | tr -d '\n' > bits
 > cat bits
- 0 1 1 0 0 0 1 1 0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 1 1 1 0 1 1 0 1 1 1 0 0 0 0 0 1 1 0 1 1 0 0 0 0 1 1 0 0 1 1 0 0 1 1 0 1 0 0 0 1 1 1 0 0 1 1 0 0 1 1 0 0 1 1 0 1 0 1 1 1 1 1 0 1 1 ... %
+ 011000110110010000110010001100100111101101110000011011000011001100110100011100110011001101011111011011100011000001011111011100110011010001100....
  ```
 
- It looks like ASCII code. In fact it is ASCII, and we can add some line wraps to make it more visible:
+ It looks like ASCII code. In fact it is ASCII, and we can add some grouping to make it more visible:
 
  ```
- > cat bits | sed -e "s/.\{16\}/&\n/g" > chars
+ > cat bits | sed -e "s/.\{8\}/& /g" > chars
  > cat chars
- 0 1 1 0 0 0 1 1
- 0 1 1 0 0 1 0 0
- 0 0 1 1 0 0 1 0
- 0 0 1 1 0 0 1 0
- 0 1 1 1 1 0 1 1
- 0 1 1 1 0 0 0 0
- 0 1 1 0 1 1 0 0
- 0 0 1 1 0 0 1 1
- 0 0 1 1 0 1 0 0
- 0 1 1 1 0 0 1 1
- 0 0 1 1 0 0 1 1
- 0 1 0 1 1 1 1 1
- ...
+ 01100011 01100100 00110010 00110010 01111011 ....
  ```
 
-All is left is to convert it to ASCII chars to get the flag REDACTED.
+All left is to convert it back to chars. I have found some perl magic which makes our analysis bash only:
 
+```
+> cat chars | perl -lape '$_=pack"(B8)*",@F'
+cd22{REDACTED}
+```
+
+¯\\_(ツ)_/¯
