@@ -6,7 +6,7 @@ Filter for the second device with `usb.src == "5.3.2"` in Wireshark.
 
 ![](wireshark.png)
 
-If you look at the HID data (bottom) it resembles to the data of an XBOX controller, at least it stars with 0014... and has the right length. Is this the telemetry data of the wheel? 
+If you look at the HID data (bottom) it resembles to the data of an XBOX controller, at least it stars with 0014... and has the right length. Is this the telemetry data of the steering wheel? 
 
 We can show all the HID data in a column in Wireshark to make it more easy for the eye:
 ![](wireshark2.png)
