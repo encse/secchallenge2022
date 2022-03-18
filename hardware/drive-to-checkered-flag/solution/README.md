@@ -13,7 +13,7 @@ We can show all the HID data in a column in Wireshark to make it more easy for t
 
 Let's export this to a csv `File / Export Packet Dissections / As CSV...`.
 
-If we put next to the video we can recognize that when the driver pushes buttons on the wheel the HID data changes. (I couldn't find this but after the contest I asked for help from the organizers.) 
+When put next to the video one can recognize that when the driver pushes buttons on the wheel the HID data changes. (I couldn't find this but after the contest I asked for help from the organizers.) 
 
 It turns out that we need to check the low 4 bits of the second byte:
 
