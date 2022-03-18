@@ -14,6 +14,7 @@ and hobbyists.
 - [crypto/grannygma](./crypto/grannygma/solution/README.md)
 - [crypto/encrypted-display-control](./crypto/encrypted-display-control/solution/README.md)
 - [hardware/martian-quest-the-terraformation](./hardware/martian-quest-the-terraformation/solution/README.md)
+- [hardware/drive-to-checkered-flag](./hardware/drive-to-checkered-flag/solution/README.md)
 - [web/instant-development-company](./web/instant-development-company/solution/README.md)
 - [web/note-keeper](./web/note-keeper/solution/README.md)
 - [reverse/layers](./reverse/layers/solution/README.md)
