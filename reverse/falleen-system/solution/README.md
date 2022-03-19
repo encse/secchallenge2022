@@ -13,7 +13,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 It seems that it's a LUKS encrypted file. I spinned up a Linux machine and followed a tutorial to create a loop device from the .dd file, then decrypt with `cryptsetup`.
 
-```
+```shell
 > sudo losetup --partscan --find --show magnetic-tape.dd
 /dev/loop0
 > sudo cryptsetup luksOpen /dev/loop0p1 img
