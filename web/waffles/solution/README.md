@@ -1,10 +1,10 @@
 # Waffles
 
 This was an SQL injection challenge. The twist is that there is an Nginx WAF in front of the vulnerable service.
-The only url parameter to play with was 'id', but if we put something evil into it we are caught but Nginx:
+The only url parameter to play with was `id`, but try to put something evil into that and Nginx immediately stops it:
 
 ```shell
-> curl "https://waffles.secchallenge.crysys.hu/?id=1%20or%201"```
+> curl "https://waffles.secchallenge.crysys.hu/?id=1%20or%201"
 <html>
 <head><title>406 Not Acceptable</title></head>
 <body bgcolor="white">
