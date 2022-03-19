@@ -1,3 +1,4 @@
+# Note Keeper
 This is a pretty simple level, but I ran into a couple of server side bugs which killed the
 challenge for my user a couple of times. These were fixed by the organizers.
 
@@ -8,7 +9,7 @@ Since the challenge description hints that the `notekeeper` service can access t
 let's try setting the url to the nasty `http://localhost/flag`.
 
 Take the url of the newly created avatar and download it with curl:
-```
+```shell
 > curl https://notekeeper.secchallenge.crysys.hu/static/00000000-0000-0000-0000-000000000000/avatar
 cd22{REDACTED}                                                
 ```
