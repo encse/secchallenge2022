@@ -32,7 +32,7 @@ It turns out that we need to check the low 4 bits of the second byte:
                   ^
 ```
 
-At 15.033221 it changes from f to 4 then quickly reset to f. Let's list all possible values:
+At 15.033221 it changes from f to 4 then quickly reset to f. Let's zoom to that column:
 
 ```
 > cat input.csv | awk -F '"' '{print substr($4, 6, 1)}' | uniq > 
@@ -72,7 +72,7 @@ Indeed, there are only 3 different values. `f` seems to be the separator between
  01100011 01100100 00110010 00110010 01111011 ....
  ```
 
-All left is to convert it back to chars. I have found some perl magic which makes our analysis bash only:
+All left is to convert it back to chars. I have found some perl magic to complete our bash only analysis:
 
 ```
 > cat chars | perl -lape '$_=pack"(B8)*",@F'
