@@ -17,5 +17,6 @@ and hobbyists.
 - [hardware/drive-to-checkered-flag](./hardware/drive-to-checkered-flag/solution/README.md)
 - [web/instant-development-company](./web/instant-development-company/solution/README.md)
 - [web/note-keeper](./web/note-keeper/solution/README.md)
+- [web/snek](./web/snek/solution/README.md)
 - [web/waffles](./web/waffles/solution/README.md)
 - [reverse/layers](./reverse/layers/solution/README.md)
