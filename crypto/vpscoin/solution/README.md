@@ -6,6 +6,9 @@ VPScoin was a reheated version of a challenge from 2020. According to the organi
 This challenge was about MD5 collision generation. There are three different ways of doing this that I know about:
 
 - given an arbitrary input, extend it with two different suffixes so that the results have the same MD5 signature. This can be generated almost instantly.
+```
+aaa
+```
 - given two different inputs, extend them with suffixes so that the results has the same signature. This takes a few days or week.
 - given an arbitrary input, change a few bits in it in fixed locations. Then generate suffixes so that the two inputs have the same signature. This takes about 10-15 minutes.
 
