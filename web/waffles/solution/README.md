@@ -1,6 +1,6 @@
 # Waffles
 
-This was an SQL injection challenge. The twist is that there is an Nginx WAF in front of the vulnerable service.
+This was an SQL injection challenge but there is an Nginx WAF in front of the vulnerable service to make it more spicy.
 The only url parameter to play with was `id`, but try to put something evil into that and Nginx immediately stops it:
 
 ```shell
