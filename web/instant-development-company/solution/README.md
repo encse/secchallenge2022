@@ -1,4 +1,6 @@
-The source of https://instant-development-company.secchallenge.crysys.hu/review reveals a link to the /debug folder.
+# Instant Development Company
+
+The source of https://instant-development-company.secchallenge.crysys.hu/ reveals a link to the /debug folder.
 
 ```
 ...
