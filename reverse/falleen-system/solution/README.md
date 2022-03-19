@@ -50,3 +50,5 @@ cd22{REDACTED}
 ```
 
 I talked to the author of the challenge again and it turns it was an oversight on his end. The flag should not be plain visible. I was expected to recover a deleted Linux binary and reverse engineer that...
+
+`¯\_(ツ)_/¯`
