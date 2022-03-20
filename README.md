@@ -16,6 +16,7 @@ and hobbyists.
 - [hardware/drive-to-checkered-flag](./hardware/drive-to-checkered-flag/solution/README.md)
 - [hardware/flagshift](./hardware/flagshift/solution/README.md)
 - [hardware/martian-quest-the-terraformation](./hardware/martian-quest-the-terraformation/solution/README.md)
+- [misc/dangerous-vulcano](./misc/dangerous-vulcano/solution.README.md)
 - [reverse/falleen-system](./reverse/falleen-system/solution/README.md)
 - [reverse/layers](./reverse/layers/solution/README.md)
 - [web/instant-development-company](./web/instant-development-company/solution/README.md)
