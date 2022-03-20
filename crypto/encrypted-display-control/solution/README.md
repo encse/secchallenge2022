@@ -5,9 +5,9 @@ and takes bytes [4:12] out of the digest. This is stored in the prng_state varia
 
 ```python
 def seed(self, s):
-	h = MD5.new()
-	h.update(s)
-	self.prng_state = h.digest()[4:12]
+    h = MD5.new()
+    h.update(s)
+    self.prng_state = h.digest()[4:12]
 ```
 
 `get_random_bytes(self, n)` can be used to retrieve an arbitrary number of pseudo random bytes. The class
@@ -20,10 +20,10 @@ the result is appended to `prng_buffer`.
 
 ```python
 def update_state_and_generate(self):
-	self.prng_state = self.shuffle_block(self.prng_state)
-	h = MD5.new()
-	h.update(self.prng_state)
-	return(h.digest())
+    self.prng_state = self.shuffle_block(self.prng_state)
+    h = MD5.new()
+    h.update(self.prng_state)
+    return(h.digest())
 ```
 
 `get_random_bytes(self, n)` calls `update_state_and_generate` in a loop until it has enough bytes in the buffer

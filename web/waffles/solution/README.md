@@ -1,7 +1,7 @@
 # Waffles
 
-This was an SQL injection challenge. The twist is that there is an Nginx WAF in front of the vulnerable service.
-The only url parameter to play with was `id`, but try to put something evil into that and Nginx immediately stops it:
+This was an SQL injection challenge but there is an Nginx WAF in front of the vulnerable service to make it more spicy.
+The only url parameter to play with was `id`, but try to put something evil into that and Nginx immediately stops you:
 
 ```shell
 > curl "https://waffles.secchallenge.crysys.hu/?id=1%20or%201"
@@ -13,6 +13,8 @@ The only url parameter to play with was `id`, but try to put something evil into
 </body>
 </html>
 ```
+
+You shall not pass...
 
 There are multiple ways to circumvent this. The one I found was escaping the `id` parameter like this: 
 
