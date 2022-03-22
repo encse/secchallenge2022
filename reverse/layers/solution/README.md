@@ -1,4 +1,6 @@
-This is a simple challenge,  solveable with `gdb`. Let's start the binary in a Linux machine:
+# Layers
+
+This is a simple challenge, solveable with `gdb`. Let's start the binary in a Linux machine:
 
 ```
 > ./layers

@@ -10,6 +10,7 @@ and hobbyists.
 
 ## Writeups:
 
+
 - [crypto/encrypted-display-control](./crypto/encrypted-display-control/solution/README.md)
 - [crypto/grannygma](./crypto/grannygma/solution/README.md)
 - [crypto/vpscoin](./crypto/vpscoin/solution/README.md)
