@@ -28,7 +28,7 @@ I also love java but scripting should be banned
 the whole password is in gold
 ```
 
-My friend told me after the contest that it is referring to the F5 steganography tool which has a Java and a Javascript implementation as well. Based on the text we should probably use the Java one, available here: https://code.google.com/archive/p/f5-steganography/
+My friend told me after the contest that this is referring to the F5 steganography tool which has a Java and a Javascript implementation as well. Based on the text we should probably use the Java one, available here: https://code.google.com/archive/p/f5-steganography/
 
 The text also says that the 'whole password is in gold'. Let's transcribe the yellow lines as well (not visible in the picture above, because I don't want to take all the fun from you).
 
