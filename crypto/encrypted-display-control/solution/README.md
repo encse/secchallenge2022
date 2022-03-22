@@ -31,5 +31,16 @@ and takes the first n out of it.
 
 ## How do we crack this?
 
-Closer observation of the `shuffle_block` function reveals that `prng_state` has a 16 long loop. Which means the actual key bytes that we use for encryption are repeated after 256 bytes. Combined this with the fact that we know every first and second bytes modulo 3 of the plaintext and 
-in the second period of the key the plaintext bytes are shifted by one, we can figure out the key bytes by xoring the plaintext and the ciphertext first. Then using the decrypted key to decrypt the remaining parts of the plaintext.
+Closer observation of the `shuffle_block` function 
+reveals that `prng_state` has a 16 long loop. This also means 
+the actual key bytes used for encryption are repeated after 256 bytes.
+we also know every first and second bytes 
+modulo 3 of the plaintext so we can find
+these bytes of the key with xoring the ciphertext
+and the plaintext. 
+In the second period of the key the plaintext bytes are shifted by one, 
+so we can figure out the missing key bytes.
+
+Then use the key to decipher the whole plaintext.
+
+The last step is to run the provided display routine on it.
