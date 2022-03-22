@@ -46,7 +46,7 @@ I didn't have the right java version installed, so spinned up a docker machine a
 docker run -it -v $(pwd):/pics openjdk:11 /bin/bash
 ```
 
-That worked and created a bunch of new files for me. I was expecting to have .txt files, but most of them were tar.gz-s instead :) That was the point where tcs the author of the challenge had to push me into the right direction...
+That worked and created a bunch of new files for me. I was expecting to have .txt files, but most of them were tar.gz-s instead :) That was the point where tcs, the author of the challenge, had to push me into the right direction...
 
 ```shell
 > file *.txt
