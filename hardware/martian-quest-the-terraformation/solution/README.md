@@ -18,7 +18,7 @@ Connection error: Connection Refused: not authorised.
 
 ```
 
-Let's create some aliases to simplify the later commands:
+Let's create some aliases to simplify the latter commands:
 
 ```
 > alias mars_cmd='mosquitto_rr -h nasa.secchallenge.crysys.hu -p 5010  -u MarkWatney -P SpacePirate -e  'nasa/marsrover/pathfinder/response'  -t 'nasa/marsrover/pathfinder/request' -m'
@@ -29,7 +29,7 @@ Let's create some aliases to simplify the later commands:
 We can issue commands with `mars_cmd`:
 
 ```
-> mars_cmd help
+> mars_cmd helpn
 Available commands: help, list, status, crew
 ```
 
