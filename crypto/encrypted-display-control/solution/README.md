@@ -39,7 +39,7 @@ modulo 3 of the plaintext so it's possible to find
 these bytes of the key with xoring the ciphertext
 and the plaintext. 
 In the second period of the key the plaintext bytes are shifted by one, 
-so we can figure out the missing key bytes.
+giving away the missing key bytes.
 
 Then use the key to decipher the whole plaintext.
 
