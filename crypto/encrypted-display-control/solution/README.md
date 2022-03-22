@@ -33,7 +33,7 @@ and takes the first n out of it.
 
 Closer observation of the `shuffle_block` function 
 reveals that `prng_state` has a 16 long loop. This also means 
-the actual key bytes used for encryption are repeated after 256 bytes.
+the actual key used for encryption are repeated after 256 bytes.
 we also know every first and second bytes 
 modulo 3 of the plaintext so we can find
 these bytes of the key with xoring the ciphertext
