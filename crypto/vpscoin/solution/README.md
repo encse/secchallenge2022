@@ -1,7 +1,7 @@
 
 # VPScoin
 
-VPScoin was a reheated version of a challenge from 2020. According to the organizes the old version had a few bugs in it which enabled some people to solve it the unintended way.
+VPScoin was a warmed up version of a challenge from 2020. According to the organizes the old version had a few bugs in it which enabled some people to solve it the unintended way.
 
 This challenge was about MD5 collision generation. There are three different ways of doing this that I know about:
 
