@@ -18,7 +18,7 @@ This is a Peacemaker poster with some Klingon characters layed on top of it. Kli
 
 ![](klingon.gif)
 
-With some more labor the following is revealed: 
+Some more labor reveals the following:
 
 ```
 this is christopfer smith known as peacemaker 
