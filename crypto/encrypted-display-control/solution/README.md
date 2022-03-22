@@ -38,9 +38,11 @@ We also know every first and second bytes
 modulo 3 of the plaintext so it's possible to find
 these bytes of the key with xoring the ciphertext
 and the plaintext. 
-In the second period of the key the plaintext bytes are shifted by one, 
-giving away the missing key bytes.
 
-Then use the key to decipher the whole plaintext.
+In the second period of the key the know plaintext bytes are shifted 
+by one (since 256 not divisble by 3) giving us a chance to 
+figure out the rest of the key.
 
-The last step is to run the provided display routine on it.
+Next decipher the plaintext.
+
+Finally run the provided display routine on it.
