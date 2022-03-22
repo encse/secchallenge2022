@@ -32,11 +32,11 @@ and takes the first n out of it.
 ## How do we crack this?
 
 Closer observation of the `shuffle_block` function 
-reveals that `prng_state` has a 16 long loop. This also means 
-the period of the encryption key is 256 bytes.
+reveals that `prng_state` has a 16 long loop. So the period of the 
+encryption key is 256 bytes.
 
 We also know every first and second bytes 
-modulo 3 of the plaintext so it's possible to find
+of the plaintext (modulo 3) so it's possible to find
 the corresponding key bytes with xoring the ciphertext
 and the plaintext. 
 
