@@ -60,4 +60,4 @@ sqlite> select * from notes;
 REDACTED
 ```
 
-I found the flag in the notes table. It was some upside down text that I could copy paste into the CTF website.
+I found the flag in the notes table. It was some 'ndsıpǝ poʍu' text that I could copy paste into the CTF website.
