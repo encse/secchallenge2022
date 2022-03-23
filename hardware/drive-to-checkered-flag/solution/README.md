@@ -32,7 +32,7 @@ It turns out that we need to check the low 4 bits of the second byte:
                   ^
 ```
 
-At 15.033221 it changes from f to 4 then quickly reset to f. Let's zoom to that column:
+At 15.033221 it changes from f to 4 then quickly reset to f. Let's focus on that column:
 
 ```shell
 > cat input.csv | awk -F '"' '{print substr($4, 6, 1)}' | uniq > signal
