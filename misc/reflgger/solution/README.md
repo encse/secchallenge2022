@@ -167,7 +167,8 @@ from flag import FLAG
 I came up with this just playing jiggsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files by random, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
 and probably overwrites the orginial file with it....
 
-Here is the plan: make pairs of the garbage lines and xor them with each other. If the result contains `cd22` we are done.
+Here is the plan: make pairs of the garbage lines base64 decode one of them 
+and xor it with the other one. If the result contains `cd22` we are done.
 
 At least that's what I was thinking, but nothing came out of it... I thought I was missing some lines because I didn't extract everything from the repository, but the answer was more surprising.
 
