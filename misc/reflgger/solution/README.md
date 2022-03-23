@@ -177,11 +177,11 @@ lots of garbage here
 # 🤣🤣😂🤣😂😂😂🤣😂＼（〇_ｏ）／(＃°Д°)...(*￣０￣)ノ(⊙o⊙)(⊙_(⊙_⊙)_⊙)👀🥙🥩🍗🍖🙄😌😴
 ```
 
-We get lots of random looking strings having the same length (not shown above), plus some Python 
-code fragments. I played with it for a while and I was able to figure out that the lines are
-probably part of the Python script that was used to generate the repo. It's randomly doing various things,
-sometimes taking a line of its own source and commiting it in a file. It has operations to drop a few commits, 
-generate some garbage etc, and it uses randomized commit messages.
+We get lots of random looking strings having the same length (not shown above), plus some Python code fragments. I played with it for a while and figured out that the lines are
+probably part of the Python script that was used to generate the repo. It's randomly doing
+various things, sometimes taking a line of its own source and commiting it in a file. It has
+operations to drop a few commits, generate some garbage etc, and it uses randomized commit
+messages.
 
 One interesting part is:
 
@@ -197,19 +197,18 @@ from flag import FLAG
     ...
 ```
 
-I came up with this just playing jigsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files randomly, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
-and probably overwrites the orginial file with it....
+I came up with this just playing jigsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files randomly, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result and probably overwrites the orginial file with it...
 
 Here is the plan: make pairs of the garbage lines base64 decode one of them 
 and xor it with the other one. If the result contains `cd22` we are done.
 
-At least that's what I was thinking, but nothing came out of it... I thought I was missing some lines because I didn't extract everything from the repository, but the answer was more surprising.
+At least that's what I was thinking, but nothing came out of it... I thought I was missing some lines because didn't extract everything from the repository, but the answer was more surprising.
 
 ```python
 >>> [ord(i) ^ ord(y) for i,y in zip('apple','pear')]
 [17, 21, 17, 30]
 ```
 
-The xor operation returns an array of numbers, and this is taken verbatim and given to the base64 encoder. It literally encodes the string `[17, 21, 17, 30]`. So we are not looking for `cd22` but something like `[99, 100, 50, 50....`
+The xor operation returns an array of numbers, and this is taken verbatim and given to the base64 encoder. It literally encodes the string `"[17, 21, 17, 30]"`. So we are not looking for `cd22` but something like `[99, 100, 50, 50....`
 
 I modified my solver script to try to JSON parse the result of the xor operation, and decoded it as ASCII chars resulting in the flag `cd22{REDACTED}`.
