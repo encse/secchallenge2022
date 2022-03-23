@@ -179,7 +179,7 @@ lots of garbage here
 
 We get lots of random looking strings having the same length (not shown above), plus some Python 
 code fragments. I played with it for a while and I was able to figure out that the lines are
-probably part of the Python script that was used to generate the repo. It's doing various things by random,
+probably part of the Python script that was used to generate the repo. It's randomly doing various things,
 one is taking a line of its own source and commit it in a file. It has operations to drop a few commits, 
 generate some garbage etc, and it uses randomized commit messages.
 
@@ -197,7 +197,7 @@ from flag import FLAG
     ...
 ```
 
-I came up with this just playing jigsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files by random, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
+I came up with this just playing jigsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files randomly, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
 and probably overwrites the orginial file with it....
 
 Here is the plan: make pairs of the garbage lines base64 decode one of them 
