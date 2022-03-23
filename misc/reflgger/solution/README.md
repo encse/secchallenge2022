@@ -206,7 +206,7 @@ and xor it with the other one. If the result contains `cd22` we are done.
 At least that's what I was thinking, but nothing came out of it... I thought I was missing some lines because I didn't extract everything from the repository, but the answer was more surprising.
 
 ```python
->>> [ord(i) ^ ord(y) for i,y in zip(FLAG,x)]
+>>> [ord(i) ^ ord(y) for i,y in zip('apple','pear')]
 [17, 21, 17, 30]
 ```
 
