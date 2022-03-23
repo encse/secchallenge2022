@@ -1,7 +1,6 @@
 # CrySyS Security Challenge 2022
 
-Organized by the Laboratory of Cryptography and System Security (CrySyS Lab) of 
-Budapest University of Technology and Economics, an annual CTF event for students
+Organized by [CrySyS Student Core](https://core.crysys.hu) and [c0r3dump](https://ctftime.org/team/65521) an annual CTF event for students
 and hobbyists.
 
 [website](https://secchallenge.crysys.hu)
