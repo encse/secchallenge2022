@@ -58,7 +58,7 @@ f
 ```
 Indeed, there are only 3 different values. `f` seems to be the separator between data bits. Let's translate `4 -> 0`, `0 -> 1` and delete the new lines:
 
-```
+```shell
 > cat signal | tr -s "40f" "01\n" | tr -d "\n" > bits
 > cat bits
  011000110110010000110010001100100111101101110000011011000011001100110100011100110011001101011111011011100011000001011111011100110011010001100....
