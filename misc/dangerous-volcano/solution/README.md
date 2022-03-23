@@ -1,6 +1,6 @@
 # Dangerous Volcano
 
-I'm terrible at osint challenges, I asked Veloxer (the author) after the contest for hints. He said that I need to find some info associated to the gmail address that I found in the website's sources.
+I'm terrible at osint challenges, I asked Veloxer (the author) after the contest for hints. He said that I need to find some info associated with the gmail address that I found in the website's sources.
 
 ```html
 <div class="person">
