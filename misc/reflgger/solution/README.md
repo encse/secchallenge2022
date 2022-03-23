@@ -103,7 +103,7 @@ The command `git cat-file` can retrieve such a blob:
 bnGPfZHIiacSDLaEzpeNupkpJwfrpEfPBMMAhldoHofYylafIwDvrnGZlIrFYBnRVkWZQlxGmqzxYdsQvjfbeBtfGsgrHWpWNqZu
 ```
 
-We better retrieve all of them into a single file:
+We better fetch all of them into a single file:
 ```shell
 > for f in $(cat blobs); do git cat-file -p $f; done > content
 ```
