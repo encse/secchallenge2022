@@ -1,6 +1,6 @@
 # refl🤣gger
 
-Reflogger was a forensics challenge. You find a git repositor with 100 files numbered from 00 to 99 in the provided .tar file.
+Reflogger was a forensics challenge. You find a git repository with 100 files numbered from 00 to 99 in the provided .tar file.
 
 The git history is not very talkative:
 
