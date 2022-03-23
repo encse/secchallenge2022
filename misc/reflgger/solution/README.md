@@ -180,7 +180,7 @@ lots of garbage here
 We get lots of random looking strings having the same length (not shown above), plus some Python 
 code fragments. I played with it for a while and I was able to figure out that the lines are
 probably part of the Python script that was used to generate the repo. It's randomly doing various things,
-one is taking a line of its own source and commit it in a file. It has operations to drop a few commits, 
+sometimes taking a line of its own source and commiting it in a file. It has operations to drop a few commits, 
 generate some garbage etc, and it uses randomized commit messages.
 
 One interesting part is:
