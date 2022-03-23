@@ -211,4 +211,4 @@ At least that's what I was thinking, but nothing came out of it... I thought I w
 
 The xor operation returns an array of numbers, and this is given verbatim to the base64 encoder. It literally encodes the string `"[17, 21, 17, 30]"`. So we are not looking for `cd22` but something like `[99, 100, 50, 50....`
 
-I modified my solver script to try to JSON parse the result of the xor operation, and decoded it as ASCII chars resulting in the flag `cd22{REDACTED}`.
+I modified my solver script to try to JSON parse the result of the base64 decode operation, and decoded it as ASCII chars resulting in the flag `cd22{REDACTED}`.
