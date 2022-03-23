@@ -16,49 +16,10 @@ There are a couple of potential attack points in that page. One is a template fi
 ```shell
 > curl 'https://instant-development-company.secchallenge.crysys.hu/download/templates'  --data-raw 'template=debug.html'
 {% extends "base.html" %}
-
-{% block head %}
-<title>Debug page</title>
-{% endblock %}
-
-{% block body %}
-<div>
-    <h1 style="text-align: center;">Debug</h1>
-
+...
     <!-- [AUTOREMOVE] AN: I've created a backup of our contracts for archival purposes. It should be in a backup.zip file in the root directory. -->
     <!-- [AUTOREMOVE] AN: Unfortunately I kinda forgot the password, but I do remember that it only had numbers in it and it was 10 digits long. -->
-
-    <form action="/ping" method="POST">
-        <label for="addr">Ping address:</label>
-        <input type="text" id="addr" name="addr" placeholder="google.com">
-        <input type="submit" value="Ping">
-    </form>
-
-    <br><br>
-
-    <form action="/download/templates" method="POST">
-        <label for="template">Download site templates:</label>
-        <select name="template" id="template">
-            <option value="base.html">base.html</option>
-            <option value="index.html">index.html</option>
-            <option value="reviews.html">reviews.html</option>
-            <option value="debug.html">debug.html</option>
-            <option value="announce.html">announce.html</option>
-        </select>
-        <input type="submit" value="Download">
-    </form>
-
-    <br><br>
-
-    <form action="/devmessage" method="POST">
-        <label for="devmessage">Message other developers:</label>
-        <input type="text" id="dev" name="dev" placeholder="developer">
-        <input type="text" id="message" name="message" placeholder="message">
-        <input type="submit" value="Send">
-    </form>
-
-</div>
-{% endblock %}%
+...
 ```
 
 Bingo. There has to be a backup.zip somewhere with a password of 10 digits. Let's try downloading the zip with the template downloader again:
