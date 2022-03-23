@@ -91,11 +91,6 @@ We are getting somewhere. We need the blobs only:
 020746d435de8d872944aae90d9e6e0e95545e77 blob 101
 ```
 
-Take the first column and store it in a file:
-```shell
->  git cat-file --batch-check --batch-all-objects --unordered | grep blob | awk -F " " '{print($1)}' > blobs
-```
-
 The command `git cat-file` can retrieve such a blob:
 
 ```shell
@@ -105,6 +100,7 @@ bnGPfZHIiacSDLaEzpeNupkpJwfrpEfPBMMAhldoHofYylafIwDvrnGZlIrFYBnRVkWZQlxGmqzxYdsQ
 
 We better fetch all of them into a single file:
 ```shell
+> git cat-file --batch-check --batch-all-objects --unordered | grep blob | awk -F " " '{print($1)}' > blobs
 > for f in $(cat blobs); do git cat-file -p $f; done > content
 ```
 
@@ -132,13 +128,50 @@ os.chdir("wdir")
 ssssss("git init")
     print(">>> "+s)
     git(HLENGTH, F)
+def commit_append():
+from flag import FLAG
+ssssss("rm -rf wdir")
+from sys import stderr
+    while len(x) < 50:
+ssssss("mkdir -p wdir")
+def commit_overwrite():
+def randstring(length):
+    ssssss("git add .")
+    for i in range(100):
+    for i in range(1000):
+            x = ff.read()
+if __name__ == "__main__":
+        commit_overwrite()
+        ssssss("git add .")
+        with open(f) as ff:
+        stderr.writelines(i)
+def git(iterations, functions):
+    for i in range(iterations):
+def git(iterations, functions):
+    pos = random.randrange(2, 5)
+        random.choice(functions)()
+        f = random.choice(os.listdir())
+        # ssssss(f"git commit -m code{j}")
+    for i in open("../gen.py").readlines():
+    ssssss(f"git commit -m {randstring(10)}")
+        ssssss(f"git commit -m {randstring(10)}")
+        ssssss(f"git commit -m {randstring(10)}")
+F = [commit_append, commit_overwrite, reset, squash]
+    ssssss(f"echo {randstring(100)} > {randfname()}")
+    return "".join(random.choices(string.digits, k=2))
+    ssssss(f"echo {randstring(100)} >> {randfname()}")
+IDk2LCA4NSwgMTA4LCAxMTAsIDM3LCAxMTQsIDMyLCA1LCAyLCAxMF0K
+IDk2LCA4NSwgMTA4LCAxMTAsIDM3LCAxMTQsIDMyLCA1LCAyLCAxMF0K
+    ssssss(f"git reset --hard HEAD~{random.randrange(1,5)}")
     ssssss(f"git reset --soft HEAD~{random.randrange(1,5)}")
     return "".join(random.choices(string.ascii_letters, k=length))
     ssssss(f"git rebase --onto master~{pos} master~{pos-1} master~{pos-2}")
         f"echo {[ord(i) ^ ord(y) for i,y in zip(FLAG,x)]} | base64 - > {f}")
 ...
 ...
+...
 lots of garbage here
+...
 ...
 ...
 # 🤣🤣😂🤣😂😂😂🤣😂＼（〇_ｏ）／(＃°Д°)...(*￣０￣)ノ(⊙o⊙)(⊙_(⊙_⊙)_⊙)👀🥙🥩🍗🍖🙄😌😴
