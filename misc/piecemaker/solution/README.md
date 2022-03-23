@@ -70,6 +70,6 @@ I went back to my image editor and after an hour I finally got the flag:
 
 ![](flag.png)
 
-Again, the relevant parts are deleted, so that you can work it out yourselves.
+Again, the relevant parts are deleted, but you can work it out on your own.
 
 
