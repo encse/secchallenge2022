@@ -1,6 +1,6 @@
 # CrySyS Security Challenge 2022
 
-Organized by [CrySyS Student Core](https://core.crysys.hu) and [c0r3dump](https://ctftime.org/team/65521) an annual CTF event for students
+Organized by [CrySyS Student Core](https://core.crysys.hu) and [c0r3dump](https://ctftime.org/team/65521), an annual CTF event for students
 and hobbyists.
 
 [website](https://secchallenge.crysys.hu)
