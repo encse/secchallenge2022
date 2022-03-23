@@ -62,7 +62,11 @@ Extracted the files like this:
 for f in *.txt; do tar -xf $f; done
 ```
 
-Guess what? I got a bunch of .png files and each of them had an other puzzle piece in it... We heard you like puzzles so we put a puzzle inside your puzzle... I went back to my image editor and after an hour of puzzling I finally got the flag:
+Guess what? I got a bunch of .png files and each of them had an other puzzle piece in it... 
+
+![](meme.jpg)
+
+I went back to my image editor and after an hour I finally got the flag:
 
 ![](flag.png)
 
