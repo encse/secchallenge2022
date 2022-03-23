@@ -19,6 +19,7 @@ and hobbyists.
 - [hardware/martian-quest-the-terraformation](./hardware/martian-quest-the-terraformation/solution/README.md)
 - [misc/dangerous-volcano](./misc/dangerous-volcano/solution/README.md)
 - [misc/piecemaker](./misc/piecemaker/solution/README.md)
+- [misc/reflgger](./misc/reflgger/solution/README.md)
 - [reverse/falleen-system](./reverse/falleen-system/solution/README.md)
 - [reverse/layers](./reverse/layers/solution/README.md)
 - [web/instant-development-company](./web/instant-development-company/solution/README.md)
