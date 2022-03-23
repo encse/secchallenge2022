@@ -89,8 +89,13 @@ We are getting somewhere. We need the blobs only:
 02f9d1a27e2301ad398a8bdd39b52d0983405633 blob 101
 02397c8ee2dfc61c7d74054a8a51ab65d88bdf32 blob 101
 020746d435de8d872944aae90d9e6e0e95545e77 blob 101
+```
+
+Take the first column and store it in a file:
+```shell
 >  git cat-file --batch-check --batch-all-objects --unordered | grep blob | awk -F " " '{print($1)}' > blobs
 ```
+
 The command `git cat-file` can retrieve such a blob:
 
 ```shell
@@ -142,7 +147,8 @@ lots of garbage here
 We get lots of random looking strings having the same length (not shown above), plus some Python 
 code fragments. I played with it for a while and I was able to figure out that the lines are
 probably part of the Python script that was used to generate the repo. It's doing various things by random,
-one is taking a line of its own source and commit it in a file. It has operations to drop a few commits, generate some garbage etc, and it uses randomized commit messages.
+one is taking a line of its own source and commit it in a file. It has operations to drop a few commits, 
+generate some garbage etc, and it uses randomized commit messages.
 
 One interesting part is:
 
@@ -158,7 +164,7 @@ from flag import FLAG
     ...
 ```
 
-I just came up with this playing jiggsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files by random, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
+I came up with this just playing jiggsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files by random, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
 and probably overwrites the orginial file with it....
 
 Here is the plan: make pairs of the garbage lines and xor them with each other. If the result contains `cd22` we are done.
