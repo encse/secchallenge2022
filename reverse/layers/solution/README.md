@@ -2,13 +2,13 @@
 
 This is a simple challenge, solveable with `gdb`. Let's start the binary in a Linux machine:
 
-```
+```shell
 > ./layers
 Okay, um, Ogres are like onions.
 ```
 
 It's waiting for some input. If you enter something it just terminates:
-```
+```shell
 > ./layers
 Okay, um, Ogres are like onions.
 hello
@@ -16,7 +16,7 @@ Wrong!
 ```
 
 Start it in a debugger.
-```
+```shell
 > gdb ./layers
 {... lots of stuff ...}
 (gdb) r
@@ -47,7 +47,7 @@ Program received signal SIGINT, Interrupt.
 
 It's in the middle of an fgets call. Put a breakpoint to `0x40162f`, this is where it returns from that.
 
-```
+```shell
 (gdb) b *0x40162f
 Breakpoint 1 at 0x40162f
 (gdb) c
@@ -59,7 +59,7 @@ Breakpoint 1, 0x000000000040162f in ?? ()
 ```
 
 Switch to asm view:
-```
+```shell
 (gdb) layout asm
    ┌─────────────────────────────────────────────────────────────────────────┐
 B+>│0x40162f        movabs $0x6c627777787f426a,%rax                          │
@@ -91,7 +91,7 @@ native process 9019 In:                                    L??   PC: 0x40162f
 (gdb) 
 ```
 It seams that it's doing some decryption then compares our input to the result. We are interested in `0x40168b callq  0x4010c0 <strcmp@plt>`
-```
+```shell
 (gdb) b *0x40168b
 Breakpoint 2 at 0x40168b
 (gdb) c
@@ -100,7 +100,7 @@ Continuing.
 Breakpoint 2, 0x000000000040168b in ?? ()
 ```
 Let's see what it compares:
-```
+```shell
 (gdb) x/s $rdi
 0x7fffffffda70: "alma\n"
 (gdb) x/s $rsi
@@ -109,13 +109,13 @@ Let's see what it compares:
 ```
 So we have the string we entered and the expected one. If we give it the right answer the dialog continues. Or we can put a breakpoint to `0x401690` as well and set the return value in `$rax` to `0`, so that the program thinks we are on track.
 
-```
+```shell
 (gdb) set $rax = 0
 ```
 
 In any way, this process can be repeated a couple of times to unfold the story. At the end we get something like this:
 
-```
+```shell
 Okay, um, Ogres are like onions.
 {Sniffs} They stink?  
 Yes... No!
@@ -128,3 +128,5 @@ You know what is something everybody likes?
 REDACTED
 REDACTED
 ```
+
+![](shrek.jpg)
