@@ -197,7 +197,7 @@ from flag import FLAG
     ...
 ```
 
-I came up with this just playing jiggsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files by random, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
+I came up with this just playing jigsaw puzzle with the lines above. The indentation helps a lot. What it seems to be doing is taking files by random, reading the contents until it finds a long enough one. Then takes whatever is in the FLAG variable and xors the file's content with it. Runs base64 on the result
 and probably overwrites the orginial file with it....
 
 Here is the plan: make pairs of the garbage lines base64 decode one of them 
