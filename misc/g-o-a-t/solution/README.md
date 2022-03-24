@@ -51,7 +51,7 @@ That's what we got:
 
 ![](almost.png)
 
-(Well 'almost' what we got. This is a screenshot of the original image.) Let's run binwalk on it:
+(Well 'almost' what we got. This is a screenshot of the original image.) Let's see what binwalk tells about it:
 ```shell
 > binwalk x.jpg
 
@@ -90,9 +90,9 @@ pw:REDACTED
 ...
 ```
 
-Here it is. Using the password we can extract the zip, which has audio.mp3 (this time not empty) in it. 
+Here it is. Using the password we can extract the zip, which has the audio.mp3 (this time not empty).
 
-If you play the .mp3, there is some weird high frequency nosie in the background, this would be a hint for the next step, but I just opened it in [Audacity](https://www.audacityteam.org/), because Velorex told me that I should check the spectrogram of the audio file. Hiding an image inside an audio is a decade old trick from hackme sites. 
+If you play the .mp3, there is some weird high frequency noise in the background, this would be a hint for the next step, but I just opened it in [Audacity](https://www.audacityteam.org/), because Velorex told me that I should check the spectrogram of the audio file. Hiding an image inside an audio is a decade old trick from hackme sites. 
 
 I can switch to Spectogram view in Audacity with opening the Audio Track dropdown:
 ![](audio_track_waveform_dropdown_menu_2_4_0.png)
