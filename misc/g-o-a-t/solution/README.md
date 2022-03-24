@@ -14,7 +14,7 @@ extracting frame 1 of 428
 extracting frame 2 of 428
 ...
 ```
-Grab a ☕ until it works. 
+Grab a ☕ until it completes. 
 
 Looking at the file sizes one of them stands out, frame 129 is somewhat bigger than the rest. I ran a versatile staganography tool called [zsteg](https://github.com/zed-0xff/zsteg) on it:
 
