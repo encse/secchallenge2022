@@ -16,7 +16,7 @@ extracting frame 2 of 428
 ```
 Grab a ☕ until it completes. 
 
-Looking at the file sizes one of them stands out, frame 129 is somewhat bigger than the rest. I ran a versatile staganography tool called [zsteg](https://github.com/zed-0xff/zsteg) on it:
+Looking at the file sizes one of them stands out, frame 129 is somewhat bigger than the rest. I ran a versatile steganography tool called [zsteg](https://github.com/zed-0xff/zsteg) on it:
 
 ```shell
 > zsteg apngframe129.png
