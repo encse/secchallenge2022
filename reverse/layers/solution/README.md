@@ -113,7 +113,7 @@ So we have the string we entered and the expected one. If we give it the right a
 (gdb) set $rax = 0
 ```
 
-In any way, this process can be repeated a couple of times to unfold the story. At the end we get something like this:
+This way or other the process can be repeated a couple of times to unfold the story with the flag:
 
 ```shell
 Okay, um, Ogres are like onions.
