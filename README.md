@@ -14,6 +14,7 @@ and hobbyists.
 - [crypto/grannygma](./crypto/grannygma/solution/README.md)
 - [crypto/vpscoin](./crypto/vpscoin/solution/README.md)
 <!-- -->
+- [hardware/broken](./hardware/broken/solution/README.md)
 - [hardware/drive-to-checkered-flag](./hardware/drive-to-checkered-flag/solution/README.md)
 - [hardware/flagshift](./hardware/flagshift/solution/README.md)
 - [hardware/martian-quest-the-terraformation](./hardware/martian-quest-the-terraformation/solution/README.md)
