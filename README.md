@@ -20,6 +20,7 @@ and hobbyists.
 <!-- -->
 - [misc/dangerous-volcano](./misc/dangerous-volcano/solution/README.md)
 - [misc/g-o-a-t](./misc/g-o-a-t/solution/README.md)
+- [misc/office-hazard](./misc/office-hazard/solution/README.md)
 - [misc/piecemaker](./misc/piecemaker/solution/README.md)
 - [misc/reflgger](./misc/reflgger/solution/README.md)
 <!-- -->
