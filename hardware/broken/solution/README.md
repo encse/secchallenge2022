@@ -90,4 +90,4 @@ I created a short python script and generated a list of frames, each in a separa
 
 ![](display.gif)
 
-The last frame of the gif is two QR codes containing the flags, but to get that one, you need to solve the challenge on your own.
+The last frame of the gif is two QR codes containing the flag, but to get that one, you need to solve the challenge on your own.
