@@ -67,7 +67,7 @@ The subsequent lines of a control block are diverse, but we just care about the 
 If d is the current data byte, the page is set with:
 ``` python
     if 0xb0 <= d <= 0xb7:
-        page = d - 0xb0
+        page = d & 0x0f
 ```
 
 And the start column:
