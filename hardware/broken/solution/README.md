@@ -20,7 +20,7 @@ name,type,start_time,duration,"ack","address","read","data"
 
 The IC from the challenge has been around for a while and used in multiple CTF contests, so there is a lot of sample code to emulate its behavior.
 
-We have two displays each with a separate address. A display has 128 x 132 monochrome pixels. The 128 vertical pixels are divided to 16 rows (called pages), each row is 8 pixels tall and controlled by a single byte of data which is layed out vertically:
+We have two displays each with a separate address. A display has 64 x 132 monochrome pixels. The 64 vertical pixels are divided to 8 rows (called pages), each row is 8 pixels tall and controlled by a single byte of data which is layed out vertically:
 
 ```
               col0   col1           col131
@@ -49,7 +49,7 @@ We have two displays each with a separate address. A display has 128 x 132 monoc
               b0_0   b1_0           b131_0
               b0_1   b1_1           b131_1
               b0_2   b1_2           b131_2
- page_15      b0_3   b1_3   ....    b131_3
+ page_7       b0_3   b1_3   ....    b131_3
               b0_4   b1_4           b131_4
               b0_5   b1_5           b131_5 
               b0_6   b1_6           b131_6 
