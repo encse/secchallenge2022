@@ -15,7 +15,7 @@ There are a couple of potential attack points in that page. One is a template fi
 
 ```shell
 > curl 'https://instant-development-company.secchallenge.crysys.hu/download/templates'  --data-raw 'template=debug.html'
-{% extends "base.html" %}
+\{% extends "base.html" %\}
 ...
     <!-- [AUTOREMOVE] AN: I've created a backup of our contracts for archival purposes. It should be in a backup.zip file in the root directory. -->
     <!-- [AUTOREMOVE] AN: Unfortunately I kinda forgot the password, but I do remember that it only had numbers in it and it was 10 digits long. -->
