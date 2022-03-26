@@ -18,7 +18,7 @@ name,type,start_time,duration,"ack","address","read","data"
 ...
 ````
 
-The `1.3" SH1106 OLED` display has been around for a while and used in multiple CTF contests, so there is a lot of sample code to emulate its behavior.
+The `1.3" SH1106 OLED` driver has been around for a while and used in multiple CTF contests, so there is a lot of sample code to emulate its behavior.
 
 We have two displays each with a separate address. A display has 64 x 132 monochrome pixels. The 64 vertical pixels are divided to 8 rows (called pages), each row is 8 pixels tall and controlled by a single byte of data which is layed out vertically:
 
