@@ -18,6 +18,7 @@ and hobbyists.
 - [hardware/drive-to-checkered-flag](./hardware/drive-to-checkered-flag/solution/README.md)
 - [hardware/flagshift](./hardware/flagshift/solution/README.md)
 - [hardware/martian-quest-the-terraformation](./hardware/martian-quest-the-terraformation/solution/README.md)
+- [hardware/suspicious-van](./hardware/suspicious-van/solution/README.md)
 <!-- -->
 - [misc/dangerous-volcano](./misc/dangerous-volcano/solution/README.md)
 - [misc/g-o-a-t](./misc/g-o-a-t/solution/README.md)
