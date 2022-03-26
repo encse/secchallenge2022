@@ -31,7 +31,7 @@ Hmmm, almost... But if we add a leading 0 to the beginning of our preamble, we g
 0101 0101 0101 0101 0101 0101 0101 0101 0101 0001 1100 1101 1
 ```
 
-Great! I had some more hickups with not realizing that the message bits are sent in LSB order, but at the and managed to port the relevant parts of the C code to (ugly) Python:
+Great! I had some more hickups with not realizing that the message bits are sent in LSB order, but at the end managed to port the relevant parts of the C code to (ugly) Python:
 
 ```python
 def decode_msg(msg):
