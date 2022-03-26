@@ -7,7 +7,7 @@ and hobbyists.
 
 ![](img.png)
 
-## Writeups:
+## Write-ups:
 
 
 - [crypto/encrypted-display-control](./crypto/encrypted-display-control/solution/README.md)
