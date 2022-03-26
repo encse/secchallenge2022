@@ -18,7 +18,7 @@ name,type,start_time,duration,"ack","address","read","data"
 ...
 ````
 
-The 1.3" SH1106 OLED display has been around for a while and used in multiple CTF contests, so there is a lot of sample code to emulate its behavior.
+The `1.3" SH1106 OLED` display has been around for a while and used in multiple CTF contests, so there is a lot of sample code to emulate its behavior.
 
 We have two displays each with a separate address. A display has 64 x 132 monochrome pixels. The 64 vertical pixels are divided to 8 rows (called pages), each row is 8 pixels tall and controlled by a single byte of data which is layed out vertically:
 
@@ -56,7 +56,7 @@ We have two displays each with a separate address. A display has 64 x 132 monoch
               b0_7   b1_7           b131_7
 ```
 
-The IC is controlled by selecting a page and a starting column, then sending data to it.  The start colum is used when you don't want to refresh the whole page just a part of it, say from column 8. 
+The display is controlled by selecting a page and a starting column, then sending data to it.  The start colum is used when you don't want to refresh the whole page just a part of it, say from column 8. 
 
 I have divided the input into multiple blocks from `"I2C","start"` to `"I2C","stop"`. The first line of each block was an "address" specifier, the subsequent lines are "data". 
 
