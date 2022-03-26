@@ -4,7 +4,7 @@ This has been my first radio signal challenge ever. I opened the signal file in 
 
 ![](urh.png)
 
-Grabbed the decoded bits and went to the second stage of the challenge. As I just learned, when someone trasmis bits over the air, the package usually starts with a preamble. Surely enough all lines started with `1010 1010 1010 1010 1010 1010 1010 1010 1010 0011 1001 1011`.
+Grabbed the decoded bits and went to the second stage. As I just learned, when someone trasmis bits over the air, the package usually starts with a preamble. Surely enough all lines started with `1010 1010 1010 1010 1010 1010 1010 1010 1010 0011 1001 1011`.
 
 In hex this is:
 ```
