@@ -1,1 +1,11 @@
+
+ title: SecChallenge 2022 CTF writeups
+email: encse@csokavar.hu
+description: >-
+  CTF writeups by encse.
+baseurl: "/secchallenge2022"
+url: "encse.github.io"
+twitter_username: encse
+github_username:  encse
+
 theme: jekyll-theme-hacker
