@@ -1,6 +1,6 @@
 # Broken
 
-I used [Logic 2](https://www.saleae.com/downloads/) to solve a hardware challenge last year. This year we had a different protocol, but the same tool was capable to translate the .sal file to something easier to handle.
+I used [Logic 2](https://www.saleae.com/downloads/) to solve a hardware challenge last year. We had a different protocol this year, but the same tool was capable to translate the .sal file to something easier to handle.
 
 Logic 2 has several protocol analyzers, although somewhat hidden in the right sidebar, I selected I2C, exported to CSV and got a nice table of events:
 
