@@ -1,6 +1,6 @@
 # Martian quest 
 
-Open the capture file in Wireshark and start analyzing the content to see that the challenge server probably uses the Mqtt protocol.
+Open the capture file in Wireshark and start analyzing the content to realize that the challenge server probably uses the Mqtt protocol.
 
 The captured transmission contains a few username/passwords pairs, but only one of them works:
 
@@ -18,7 +18,7 @@ Connection error: Connection Refused: not authorised.
 
 ```
 
-Let's create some aliases to simplify the latter commands:
+Let's create some aliases to simplify the forthcoming commands:
 
 ```
 > alias mars_cmd='mosquitto_rr -h nasa.secchallenge.crysys.hu -p 5010  -u MarkWatney -P SpacePirate -e  'nasa/marsrover/pathfinder/response'  -t 'nasa/marsrover/pathfinder/request' -m'
