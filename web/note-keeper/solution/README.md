@@ -1,10 +1,10 @@
 # Note Keeper
-This is a pretty simple level, but I ran into a couple of server side bugs which killed the
+This is a pretty simple problem, but I ran into a couple of server side bugs which killed the
 challenge for my user a couple of times. These were fixed by the organizers.
 
 Once it was up and running I could register a new user and login.
 
-There is a profile page where we can upload an avater either from a file or with an url. 
+There is a profile page where we can upload an avatar either from a file or specifying an url. 
 Since the challenge description hints that the `notekeeper` service can access the `flag` service
 let's try setting the url to the nasty `http://localhost/flag`.
 
